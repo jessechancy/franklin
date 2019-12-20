@@ -13,7 +13,7 @@ struct LogInScreen: View {
     @State var password = ""
     var body: some View {
         NavigationView {
-            VStack (alignment: .center) {
+            VStack {
                 Text ("LOGIN,")
                     .font(.largeTitle)
                     .foregroundColor(Color.black)
@@ -39,6 +39,7 @@ struct LogInScreen: View {
                         .stroke(Color.gray, lineWidth: 1)
                 )
                 .padding(.bottom, 20)
+                
                 HStack {
                     Image(systemName: "person")
                         .padding()
@@ -56,14 +57,15 @@ struct LogInScreen: View {
                 )
                 .padding(.bottom, 20)
                 Spacer()
-                Button(action: {print("Clicked Create")}) {
-                    Text("CREATE")
-                        .font(.headline)
-                        .foregroundColor(Color.white)
-                        .frame(width: 350, height: 50)
-                        .background(Color.green)
-                        .cornerRadius(25)
-                        .padding(.bottom, 20)
+                Button (action: {log_in(email: self.email,
+                                        password: self.password)}) {
+                        Text("CONTINUE")
+                            .font(.headline)
+                            .foregroundColor(Color.white)
+                            .frame(width: 350, height: 50)
+                            .background(Color.green)
+                            .cornerRadius(25)
+                            .padding(.bottom, 10)
                 }
                 Spacer()
             }.frame (minHeight: 0, maxHeight: .infinity,

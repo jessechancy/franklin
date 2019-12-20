@@ -27,14 +27,145 @@ struct SignUpScreen: View {
                     .font(.caption)
                     .foregroundColor(Color.gray)
                     .padding(.bottom, 50)
-                InputBox(tmp: first_name, input_default: "Name")
-                InputBox(tmp: last_name, input_default: "Last Name")
-                InputBox(tmp: email, input_default: "Email Address")
-                InputBoxSafe(tmp: password, input_default: "Password")
-                InputBox(tmp: address, input_default: "Address")
-                InputBox(tmp: statecity, input_default: "State/City")
-                InputBox(tmp: zipcode, input_default: "Zip Code")
-                Button(action: {print("Continue Clicked")}) {
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    TextField ("Name", text: $first_name)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    TextField ("Last Name", text: $last_name)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    TextField ("Email Address", text: $email)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    SecureField ("Password", text: $password)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    TextField ("Address", text: $address)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    TextField ("State/City", text: $statecity)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+                
+                HStack (alignment: .center) {
+                    //Placeholder Image
+                    Image(systemName: "person")
+                        .padding()
+                    Divider().frame(height:20)
+                    TextField ("Zip Code", text: $zipcode)
+                        .foregroundColor(Color.gray)
+                        .font(.caption)
+                        .padding()
+                        .frame(minWidth: 0, maxWidth: 300)
+                }
+                .frame(minHeight: 0, maxHeight: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray, lineWidth: 1)
+                )
+                .padding(.bottom, 10)
+               
+                Button(action: {
+                    sign_up(
+                            first_name: self.first_name,
+                            last_name: self.last_name,
+                            email: self.email,
+                            password: self.password,
+                            address: self.address,
+                            statecity: self.statecity,
+                            zipcode: self.zipcode
+                    )
+                    log_in(email: self.email, password: self.password)
+                }) {
                     Text("CONTINUE")
                         .font(.headline)
                         .foregroundColor(Color.white)
@@ -55,7 +186,7 @@ struct SignUpScreen_Previews: PreviewProvider {
         SignUpScreen()
     }
 }
-
+/*
 struct InputBox: View {
     @State var tmp = ""
     var input_default = ""
@@ -104,3 +235,4 @@ struct InputBoxSafe: View {
     }
 }
 
+*/

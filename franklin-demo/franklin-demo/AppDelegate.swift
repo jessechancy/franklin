@@ -6,15 +6,36 @@
 //  Copyright © 2019 Jesse Chan. All rights reserved.
 //
 
+
 import UIKit
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //Authentication
+        do {
+            LCApplication.logLevel = .all //REMOVE FOR PUBLISHING
+            try LCApplication.default.set(
+                id: "tEyfOIHXQqhoLA5wqWketURi-gzGzoHsz",
+                key: "UmhFSfnAO8N74gikLpMVr0rd",
+                serverURL: "https://teyfoihx.lc-cn-n1-shared.com"
+            )
+        } catch {
+            fatalError("\(error)")
+        }
+        do {
+            let testObject = LCObject(className: "TestObject")
+            try testObject.set("words", value: "Hello world!")
+            let result = testObject.save()
+            if let error = result.error {
+              print(error)
+            }
+        } catch {
+            print(error)
+        }
         return true
     }
 
