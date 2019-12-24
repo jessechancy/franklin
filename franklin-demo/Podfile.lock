@@ -12,17 +12,25 @@ PODS:
     - LeanCloud/Foundation (= 17.3.2)
     - Starscream (~> 3.1)
     - SwiftProtobuf (~> 1.7.0)
+  - Realm (4.3.0):
+    - Realm/Headers (= 4.3.0)
+  - Realm/Headers (4.3.0)
+  - RealmSwift (4.3.0):
+    - Realm (= 4.3.0)
   - Starscream (3.1.1)
   - SwiftProtobuf (1.7.0)
 
 DEPENDENCIES:
   - LeanCloud
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - GRDB.swift
     - LeanCloud
+    - Realm
+    - RealmSwift
     - Starscream
     - SwiftProtobuf
 
@@ -30,9 +38,11 @@ SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   GRDB.swift: 0df1953957f179bff46fccb8402a196e3b7a77f5
   LeanCloud: c0526c61ea50c463bc05c6dc66a2a8ea077d18bf
+  Realm: 9357c3589555793e1860a7104a7412bca4a48d99
+  RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftProtobuf: 4fd9645e69b72cbae6ec8da5be0cdd20ca6565dd
 
-PODFILE CHECKSUM: 322a06cbdc97888dc0224f241140d544513003a1
+PODFILE CHECKSUM: 012e80e30910ff32119a89c7a8c39904d61729c2
 
 COCOAPODS: 1.8.4

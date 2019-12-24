@@ -26,16 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             fatalError("\(error)")
         }
-        do {
-            let testObject = LCObject(className: "TestObject")
-            try testObject.set("words", value: "Hello world!")
-            let result = testObject.save()
-            if let error = result.error {
-              print(error)
-            }
-        } catch {
-            print(error)
-        }
         return true
     }
 

@@ -9,6 +9,14 @@
 import UIKit
 import SwiftUI
 
+class UserSettings: ObservableObject {
+    @Published var logged_in : Bool = false
+}
+
+class UserOnboard: ObservableObject {
+    @Published var onboard_complete : Bool = false
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -20,12 +28,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = StartOnboardView()
+        let onboard = UserOnboard()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(onboard))
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -62,3 +71,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+struct StartView: View {
+    @EnvironmentObject var settings: UserSettings
+    
+    var body: some View {
+        if settings.logged_in {
+            return AnyView(HomePage())
+        } else {
+            return AnyView(LogInView())
+        }
+    }
+}
+
+struct StartOnboardView: View {
+    @EnvironmentObject var user_onboard: UserOnboard
+    
+    var body: some View {
+        
+        let content_view = StartView()
+        let settings = UserSettings()
+        
+        if user_onboard.onboard_complete {
+            return AnyView(content_view.environmentObject(settings))
+        } else {
+            if UserDefaults.standard.bool(forKey: "Loggedin") {
+                settings.logged_in = true
+                return AnyView(HomePage())
+            } else {
+                settings.logged_in = false
+                return AnyView(ContentView())
+            }
+        }
+    }
+}

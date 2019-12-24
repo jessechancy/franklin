@@ -12,7 +12,6 @@ import UIKit
 //Loads Data from JSON File
 
 let LogData: [Log] = load("LogData.json")
-let UserData: [User] = load("UserData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

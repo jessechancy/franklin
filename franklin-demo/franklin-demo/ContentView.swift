@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var user_onboard: UserOnboard
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -25,7 +28,7 @@ struct ContentView: View {
                         .foregroundColor(Color.white)
                         .padding()
                     Spacer()
-                    NavigationLink (destination: SignUpScreen()) {
+                    NavigationLink (destination: SignUpView()) {
                         Text("CREATE ACCOUNT")
                             .font(.headline)
                             .foregroundColor(Color.white)
@@ -35,7 +38,9 @@ struct ContentView: View {
                             .cornerRadius(25)
                             .padding(.bottom, 20)
                     }
-                    NavigationLink (destination: LogInScreen()) {
+                    Button (action:
+                        {self.user_onboard.onboard_complete = true}
+                    ) {
                         Text("LOG IN")
                             .font(.headline)
                             .foregroundColor(Color.gray)

@@ -15,17 +15,17 @@
 		403F649523AB1F59009C6E03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403F649323AB1F59009C6E03 /* LaunchScreen.storyboard */; };
 		403F64A023AB1F5A009C6E03 /* franklin_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F649F23AB1F5A009C6E03 /* franklin_demoTests.swift */; };
 		403F64AB23AB1F5A009C6E03 /* franklin_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64AA23AB1F5A009C6E03 /* franklin_demoUITests.swift */; };
-		403F64B923AB271A009C6E03 /* LogInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64B823AB271A009C6E03 /* LogInScreen.swift */; };
-		403F64BB23AB272A009C6E03 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64BA23AB272A009C6E03 /* SignUpScreen.swift */; };
-		403F64BD23AB273B009C6E03 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64BC23AB273B009C6E03 /* QRScanner.swift */; };
-		403F64BF23AB4BB7009C6E03 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64BE23AB4BB7009C6E03 /* AuthenticationController.swift */; };
-		403F64C223AB538F009C6E03 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 403F64C123AB538F009C6E03 /* SwiftPackageProductDependency */; };
-		403F64C423AB624E009C6E03 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C323AB624E009C6E03 /* MainScreen.swift */; };
-		403F64C623AB6272009C6E03 /* LiveLogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C523AB6272009C6E03 /* LiveLogScreen.swift */; };
+		403F64B923AB271A009C6E03 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64B823AB271A009C6E03 /* LogInView.swift */; };
+		403F64BB23AB272A009C6E03 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64BA23AB272A009C6E03 /* SignUpView.swift */; };
+		403F64BD23AB273B009C6E03 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64BC23AB273B009C6E03 /* QRScannerView.swift */; };
+		403F64C223AB538F009C6E03 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 403F64C123AB538F009C6E03 /* CodeScanner */; };
+		403F64C423AB624E009C6E03 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C323AB624E009C6E03 /* HomePage.swift */; };
+		403F64C623AB6272009C6E03 /* LiveLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C523AB6272009C6E03 /* LiveLogsView.swift */; };
 		403F64C823AB6417009C6E03 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C723AB6417009C6E03 /* Log.swift */; };
 		403F64CA23AB6755009C6E03 /* LogData.json in Resources */ = {isa = PBXBuildFile; fileRef = 403F64C923AB6755009C6E03 /* LogData.json */; };
 		403F64CC23AB69B6009C6E03 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64CB23AB69B6009C6E03 /* Data.swift */; };
-		403F64CE23AB82C4009C6E03 /* UserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 403F64CD23AB82C4009C6E03 /* UserData.json */; };
+		403F64CE23AB82C4009C6E03 /* FoodData.json in Resources */ = {isa = PBXBuildFile; fileRef = 403F64CD23AB82C4009C6E03 /* FoodData.json */; };
+		40D8635E23B1C13F003302BA /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8635D23B1C13F003302BA /* RealmUser.swift */; };
 		59F0B8E2977F8C41128B7208 /* Pods_franklin_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D25E9C758F751EB444602 /* Pods_franklin_demo.framework */; };
 		91809E2EF2B5EA69E2D85B1C /* Pods_franklin_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE91B58E3E0894AF07E1FDFC /* Pods_franklin_demoTests.framework */; };
 		A7678A4674410E4F0C8CF235 /* Pods_franklin_demo_franklin_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E9213AB748914B0DD52791 /* Pods_franklin_demo_franklin_demoUITests.framework */; };
@@ -64,16 +64,16 @@
 		403F64A623AB1F5A009C6E03 /* franklin-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "franklin-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		403F64AA23AB1F5A009C6E03 /* franklin_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = franklin_demoUITests.swift; sourceTree = "<group>"; };
 		403F64AC23AB1F5A009C6E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		403F64B823AB271A009C6E03 /* LogInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
-		403F64BA23AB272A009C6E03 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
-		403F64BC23AB273B009C6E03 /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
-		403F64BE23AB4BB7009C6E03 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
-		403F64C323AB624E009C6E03 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		403F64C523AB6272009C6E03 /* LiveLogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLogScreen.swift; sourceTree = "<group>"; };
+		403F64B823AB271A009C6E03 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		403F64BA23AB272A009C6E03 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		403F64BC23AB273B009C6E03 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		403F64C323AB624E009C6E03 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		403F64C523AB6272009C6E03 /* LiveLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLogsView.swift; sourceTree = "<group>"; };
 		403F64C723AB6417009C6E03 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		403F64C923AB6755009C6E03 /* LogData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LogData.json; sourceTree = "<group>"; };
 		403F64CB23AB69B6009C6E03 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		403F64CD23AB82C4009C6E03 /* UserData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserData.json; sourceTree = "<group>"; };
+		403F64CD23AB82C4009C6E03 /* FoodData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodData.json; sourceTree = "<group>"; };
+		40D8635D23B1C13F003302BA /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		51269334874EE27C74296352 /* Pods-franklin-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-franklin-demo.release.xcconfig"; path = "Target Support Files/Pods-franklin-demo/Pods-franklin-demo.release.xcconfig"; sourceTree = "<group>"; };
 		66ED44EB88CF86407F0DBE18 /* Pods-franklin-demo-franklin-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-franklin-demo-franklin-demoUITests.release.xcconfig"; path = "Target Support Files/Pods-franklin-demo-franklin-demoUITests/Pods-franklin-demo-franklin-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E8125F0E4348E68DF1A6B5B /* Pods-franklin-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-franklin-demoTests.debug.xcconfig"; path = "Target Support Files/Pods-franklin-demoTests/Pods-franklin-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				403F64C223AB538F009C6E03 /* BuildFile in Frameworks */,
+				403F64C223AB538F009C6E03 /* CodeScanner in Frameworks */,
 				59F0B8E2977F8C41128B7208 /* Pods_franklin_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,16 +141,14 @@
 				403F648823AB1F57009C6E03 /* AppDelegate.swift */,
 				403F648A23AB1F57009C6E03 /* SceneDelegate.swift */,
 				403F648C23AB1F57009C6E03 /* ContentView.swift */,
-				403F64B823AB271A009C6E03 /* LogInScreen.swift */,
-				403F64BA23AB272A009C6E03 /* SignUpScreen.swift */,
-				403F64BE23AB4BB7009C6E03 /* AuthenticationController.swift */,
-				403F64BC23AB273B009C6E03 /* QRScanner.swift */,
-				403F64C323AB624E009C6E03 /* MainScreen.swift */,
-				403F64C523AB6272009C6E03 /* LiveLogScreen.swift */,
+				40D8635C23B06302003302BA /* Registration */,
+				403F64BC23AB273B009C6E03 /* QRScannerView.swift */,
+				403F64C323AB624E009C6E03 /* HomePage.swift */,
+				403F64C523AB6272009C6E03 /* LiveLogsView.swift */,
 				403F64C723AB6417009C6E03 /* Log.swift */,
 				403F64CB23AB69B6009C6E03 /* Data.swift */,
 				403F64C923AB6755009C6E03 /* LogData.json */,
-				403F64CD23AB82C4009C6E03 /* UserData.json */,
+				403F64CD23AB82C4009C6E03 /* FoodData.json */,
 				403F648E23AB1F59009C6E03 /* Assets.xcassets */,
 				403F649323AB1F59009C6E03 /* LaunchScreen.storyboard */,
 				403F649623AB1F59009C6E03 /* Info.plist */,
@@ -185,6 +183,16 @@
 			path = "franklin-demoUITests";
 			sourceTree = "<group>";
 		};
+		40D8635C23B06302003302BA /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				403F64B823AB271A009C6E03 /* LogInView.swift */,
+				403F64BA23AB272A009C6E03 /* SignUpView.swift */,
+				40D8635D23B1C13F003302BA /* RealmUser.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		4A5EC8105AF047AE5359EF46 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +203,6 @@
 				8E8125F0E4348E68DF1A6B5B /* Pods-franklin-demoTests.debug.xcconfig */,
 				22488DCB277CEE66AE2DEA14 /* Pods-franklin-demoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,7 +235,7 @@
 			);
 			name = "franklin-demo";
 			packageProductDependencies = (
-				403F64C123AB538F009C6E03 /* SwiftPackageProductDependency */,
+				403F64C123AB538F009C6E03 /* CodeScanner */,
 			);
 			productName = "franklin-demo";
 			productReference = 403F648523AB1F57009C6E03 /* franklin-demo.app */;
@@ -242,6 +249,7 @@
 				403F649723AB1F5A009C6E03 /* Sources */,
 				403F649823AB1F5A009C6E03 /* Frameworks */,
 				403F649923AB1F5A009C6E03 /* Resources */,
+				5BD3F9E10325AF6D208F7065 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,7 +314,7 @@
 			);
 			mainGroup = 403F647C23AB1F57009C6E03;
 			packageReferences = (
-				403F64C023AB538E009C6E03 /* RemoteSwiftPackageReference */,
+				403F64C023AB538E009C6E03 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 403F648623AB1F57009C6E03 /* Products */;
 			projectDirPath = "";
@@ -328,7 +336,7 @@
 				403F649223AB1F59009C6E03 /* Preview Assets.xcassets in Resources */,
 				403F64CA23AB6755009C6E03 /* LogData.json in Resources */,
 				403F648F23AB1F59009C6E03 /* Assets.xcassets in Resources */,
-				403F64CE23AB82C4009C6E03 /* UserData.json in Resources */,
+				403F64CE23AB82C4009C6E03 /* FoodData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +377,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BD3F9E10325AF6D208F7065 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-franklin-demoTests/Pods-franklin-demoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-franklin-demoTests/Pods-franklin-demoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-franklin-demoTests/Pods-franklin-demoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		76B042B5C77943234377E0A2 /* [CP] Embed Pods Frameworks */ = {
@@ -456,15 +481,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				403F64C423AB624E009C6E03 /* MainScreen.swift in Sources */,
-				403F64C623AB6272009C6E03 /* LiveLogScreen.swift in Sources */,
+				403F64C423AB624E009C6E03 /* HomePage.swift in Sources */,
+				403F64C623AB6272009C6E03 /* LiveLogsView.swift in Sources */,
+				40D8635E23B1C13F003302BA /* RealmUser.swift in Sources */,
 				403F64C823AB6417009C6E03 /* Log.swift in Sources */,
-				403F64BF23AB4BB7009C6E03 /* AuthenticationController.swift in Sources */,
 				403F64CC23AB69B6009C6E03 /* Data.swift in Sources */,
-				403F64BB23AB272A009C6E03 /* SignUpScreen.swift in Sources */,
+				403F64BB23AB272A009C6E03 /* SignUpView.swift in Sources */,
 				403F648923AB1F57009C6E03 /* AppDelegate.swift in Sources */,
-				403F64B923AB271A009C6E03 /* LogInScreen.swift in Sources */,
-				403F64BD23AB273B009C6E03 /* QRScanner.swift in Sources */,
+				403F64B923AB271A009C6E03 /* LogInView.swift in Sources */,
+				403F64BD23AB273B009C6E03 /* QRScannerView.swift in Sources */,
 				403F648B23AB1F57009C6E03 /* SceneDelegate.swift in Sources */,
 				403F648D23AB1F57009C6E03 /* ContentView.swift in Sources */,
 			);
@@ -793,7 +818,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		403F64C023AB538E009C6E03 /* RemoteSwiftPackageReference */ = {
+		403F64C023AB538E009C6E03 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
@@ -804,9 +829,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		403F64C123AB538F009C6E03 /* SwiftPackageProductDependency */ = {
+		403F64C123AB538F009C6E03 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 403F64C023AB538E009C6E03 /* RemoteSwiftPackageReference */;
+			package = 403F64C023AB538E009C6E03 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
