@@ -10,6 +10,7 @@ import LeanCloud
 import SwiftUI
 import RealmSwift
 
+
 struct SignUpView: View {
     
     @EnvironmentObject var user_onboard: UserOnboard
@@ -203,43 +204,46 @@ struct SignUpView: View {
     }
     
     func sign_up() -> Bool {
-        do {
-            let user = LCUser()
+        
+        if NetStatus.shared.isConnected {
+            print("Connected to Wifi")
+            do {
+               let user = LCUser()
 
-            user.username = LCString(self.first_name)
-            user.password = LCString(self.password)
-            user.email = LCString(self.email)
-            
-            try user.set("name", value: LCString(self.first_name))
-            try user.set("lastname", value: LCString(self.last_name))
-            try user.set("address", value: LCString(self.address))
-            try user.set("statecity", value: LCString(self.statecity))
-            try user.set("zipcode", value: LCString(self.zipcode))
-            
-            if user.signUp().isSuccess {
-                let realm = try! Realm()
-                let user = User()
-                user.first_name = self.first_name
-                user.last_name = self.last_name
-                user.email = self.email
-                user.password = self.password
-                user.address = self.address
-                user.statecity = self.statecity
-                user.zipcode = self.zipcode
-                try! realm.write {
-                    realm.add(user)
-                }
-                print(Realm.Configuration.defaultConfiguration.fileURL)
-                return true
-            }
-            return false
-        } catch {
-            print(error)
-            return false
+               user.username = LCString(self.first_name)
+               user.password = LCString(self.password)
+               user.email = LCString(self.email)
+               
+               try user.set("name", value: LCString(self.first_name))
+               try user.set("lastname", value: LCString(self.last_name))
+               try user.set("address", value: LCString(self.address))
+               try user.set("statecity", value: LCString(self.statecity))
+               try user.set("zipcode", value: LCString(self.zipcode))
+               return true
+           } catch {
+               print(error)
+               return false
+           }
+        } else {
+            print("Not Connected to Wifi")
         }
+        let realm = try! Realm()
+        let user = User()
+
+        user.first_name = self.first_name
+        user.last_name = self.last_name
+        user.email = self.email
+        user.password = self.password
+        user.address = self.address
+        user.statecity = self.statecity
+        user.zipcode = self.zipcode
+        try! realm.write {
+            realm.add(user, update: .all)
+        }
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        return true
     }
 }
-
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()

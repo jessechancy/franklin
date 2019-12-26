@@ -8,18 +8,21 @@ target 'franklin-demo' do
   # Pods for franklin-demo
   pod "LeanCloud"
   pod "RealmSwift"
+  pod "ReachabilitySwift"
 
   target 'franklin-demoTests' do
     inherit! :search_paths
     # Pods for testing
     pod "LeanCloud"
     pod "RealmSwift"
+    pod "ReachabilitySwift"
   end
 
   target 'franklin-demoUITests' do
     # Pods for testing
     pod "LeanCloud"
     pod "RealmSwift"
+    pod "ReachabilitySwift"
   end
 
 end

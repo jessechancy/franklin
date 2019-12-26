@@ -28,14 +28,17 @@ struct LogRow: View {
 
 struct LiveLogsView: View {
     var body: some View {
+        
         List(LogData) {
             Log in LogRow(log : Log)
         }
+        .onAppear {UITableView.appearance().separatorStyle = .singleLine}
     }
 }
 
 struct LiveLogsView_Previews: PreviewProvider {
     static var previews: some View {
+        
         LiveLogsView()
     }
 }

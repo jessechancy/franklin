@@ -13,10 +13,30 @@ struct HomePage: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.white
+                Color.black
                 .edgesIgnoringSafeArea(.all)
                 //TODO: Add intermediate images and data display
                 Text("Home Content")
+                ScrollView {
+                    GeometryReader {
+                        geometry in
+                        Image(systemName: "person")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .offset(y: geometry.frame(in: .global).minY/9)
+                        .clipped()
+                    }.frame(height:400)
+                    VStack {
+                        Text("hi")
+                        Text("bye")
+                        Text("okay")
+                        //.onAppear {UITableView.appearance().separatorStyle = .none }
+                    }
+                    
+                }.edgesIgnoringSafeArea(.all)
+                 .foregroundColor(Color.white)
+                
                 HStack {
                     Spacer()
                     FloatingMenu(showQR: $showQR)
@@ -64,7 +84,7 @@ struct FloatingMenu: View {
                 }
                 .transition(.move(edge: .trailing))
                 .sheet(isPresented: $showQR) {
-                    QRScannerView()
+                    QRScannerView(showQR : self.$showQR)
                 }
             }
             if showMenuButton2 {

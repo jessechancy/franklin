@@ -10,12 +10,17 @@
 import UIKit
 import LeanCloud
 
+let API = "https://teyfoihx.lc-cn-n1-shared.com"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var syncService: SyncService!
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //Authentication
+    
         do {
             LCApplication.logLevel = .all //REMOVE FOR PUBLISHING
             try LCApplication.default.set(
@@ -23,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 key: "UmhFSfnAO8N74gikLpMVr0rd",
                 serverURL: "https://teyfoihx.lc-cn-n1-shared.com"
             )
+            
+            syncService = SyncService(modelTypes: [User.self])
+
         } catch {
             fatalError("\(error)")
         }

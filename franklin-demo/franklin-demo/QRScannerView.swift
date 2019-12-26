@@ -7,13 +7,13 @@
 //
 
 import SwiftUI
-//import CodeScanner
+import CodeScanner
 
 struct QRScannerView: View {
-    //@State private var isShowingScanner = true
-    //func handleScan(result: Result<String, CodeScannerView.ScanError>) {
-    //self.isShowingScanner = false
-    //}
+    @Binding var showQR : Bool
+    func handleScan(result: Result<String, CodeScannerView.ScanError>) {
+        self.showQR = false
+    }
     var body: some View {
         NavigationView {
             ZStack {
@@ -24,12 +24,13 @@ struct QRScannerView: View {
                         .font(.largeTitle)
                         .foregroundColor(Color.gray)
                         .padding()
-                    //CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
+                    CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
+                        .frame(minHeight: 0, maxHeight: 350)
                     Text ("Scan the qr code to connect")
                         .font(.caption)
                         .foregroundColor(Color.gray)
                         .padding()
-                    Button (action: {print("Pressed Connect")}) {
+                    Button (action: {self.showQR = false}) {
                         Text("CONNECT")
                             .font(.headline)
                             .foregroundColor(Color.gray)
@@ -47,8 +48,3 @@ struct QRScannerView: View {
     }
 }
 
-struct QRScannerView_Previews: PreviewProvider {
-    static var previews: some View {
-        QRScannerView()
-    }
-}

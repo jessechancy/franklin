@@ -101,7 +101,6 @@ struct LogInView: View {
                         .cornerRadius(25)
                         .padding(.bottom, 10)
                 }
-                
             }
             Spacer()
         }.alert(isPresented: $show_alert, content: { self.alert })
