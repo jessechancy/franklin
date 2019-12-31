@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+
     @EnvironmentObject var user_onboard: UserOnboard
     
     var body: some View {
@@ -58,6 +57,7 @@ struct ContentView: View {
         }.edgesIgnoringSafeArea(.all)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

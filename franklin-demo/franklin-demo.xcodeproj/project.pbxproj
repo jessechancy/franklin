@@ -21,7 +21,6 @@
 		403F64C223AB538F009C6E03 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 403F64C123AB538F009C6E03 /* CodeScanner */; };
 		403F64C423AB624E009C6E03 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C323AB624E009C6E03 /* HomePage.swift */; };
 		403F64C623AB6272009C6E03 /* LiveLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C523AB6272009C6E03 /* LiveLogsView.swift */; };
-		403F64C823AB6417009C6E03 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64C723AB6417009C6E03 /* Log.swift */; };
 		403F64CA23AB6755009C6E03 /* LogData.json in Resources */ = {isa = PBXBuildFile; fileRef = 403F64C923AB6755009C6E03 /* LogData.json */; };
 		403F64CC23AB69B6009C6E03 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F64CB23AB69B6009C6E03 /* Data.swift */; };
 		403F64CE23AB82C4009C6E03 /* FoodData.json in Resources */ = {isa = PBXBuildFile; fileRef = 403F64CD23AB82C4009C6E03 /* FoodData.json */; };
@@ -29,6 +28,11 @@
 		40D8636023B463ED003302BA /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8635F23B463ED003302BA /* SyncService.swift */; };
 		40D8636223B46458003302BA /* Uploadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8636123B46458003302BA /* Uploadable.swift */; };
 		40D8636423B47FDD003302BA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8636323B47FDC003302BA /* Network.swift */; };
+		40D8636623B5A57F003302BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8636523B5A57E003302BA /* NetworkManager.swift */; };
+		40D8636823B5D095003302BA /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8636723B5D095003302BA /* SyncManager.swift */; };
+		40D8636D23B5D425003302BA /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8636C23B5D425003302BA /* VideoPlayerView.swift */; };
+		40D8637123B9A3B8003302BA /* RealmVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8637023B9A3B7003302BA /* RealmVideo.swift */; };
+		40D8637523B9DFB2003302BA /* RealmProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8637423B9DFB2003302BA /* RealmProduct.swift */; };
 		59F0B8E2977F8C41128B7208 /* Pods_franklin_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D25E9C758F751EB444602 /* Pods_franklin_demo.framework */; };
 		91809E2EF2B5EA69E2D85B1C /* Pods_franklin_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE91B58E3E0894AF07E1FDFC /* Pods_franklin_demoTests.framework */; };
 		A7678A4674410E4F0C8CF235 /* Pods_franklin_demo_franklin_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E9213AB748914B0DD52791 /* Pods_franklin_demo_franklin_demoUITests.framework */; };
@@ -72,7 +76,6 @@
 		403F64BC23AB273B009C6E03 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		403F64C323AB624E009C6E03 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		403F64C523AB6272009C6E03 /* LiveLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLogsView.swift; sourceTree = "<group>"; };
-		403F64C723AB6417009C6E03 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		403F64C923AB6755009C6E03 /* LogData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LogData.json; sourceTree = "<group>"; };
 		403F64CB23AB69B6009C6E03 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		403F64CD23AB82C4009C6E03 /* FoodData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodData.json; sourceTree = "<group>"; };
@@ -80,6 +83,11 @@
 		40D8635F23B463ED003302BA /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
 		40D8636123B46458003302BA /* Uploadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uploadable.swift; sourceTree = "<group>"; };
 		40D8636323B47FDC003302BA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		40D8636523B5A57E003302BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		40D8636723B5D095003302BA /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		40D8636C23B5D425003302BA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		40D8637023B9A3B7003302BA /* RealmVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmVideo.swift; sourceTree = "<group>"; };
+		40D8637423B9DFB2003302BA /* RealmProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProduct.swift; sourceTree = "<group>"; };
 		51269334874EE27C74296352 /* Pods-franklin-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-franklin-demo.release.xcconfig"; path = "Target Support Files/Pods-franklin-demo/Pods-franklin-demo.release.xcconfig"; sourceTree = "<group>"; };
 		66ED44EB88CF86407F0DBE18 /* Pods-franklin-demo-franklin-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-franklin-demo-franklin-demoUITests.release.xcconfig"; path = "Target Support Files/Pods-franklin-demo-franklin-demoUITests/Pods-franklin-demo-franklin-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E8125F0E4348E68DF1A6B5B /* Pods-franklin-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-franklin-demoTests.debug.xcconfig"; path = "Target Support Files/Pods-franklin-demoTests/Pods-franklin-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,14 +156,10 @@
 				403F648A23AB1F57009C6E03 /* SceneDelegate.swift */,
 				403F648C23AB1F57009C6E03 /* ContentView.swift */,
 				40D8636323B47FDC003302BA /* Network.swift */,
+				40D8636923B5D2CF003302BA /* Networks */,
 				40D8635C23B06302003302BA /* Registration */,
-				403F64BC23AB273B009C6E03 /* QRScannerView.swift */,
-				403F64C323AB624E009C6E03 /* HomePage.swift */,
-				403F64C523AB6272009C6E03 /* LiveLogsView.swift */,
-				403F64C723AB6417009C6E03 /* Log.swift */,
-				403F64CB23AB69B6009C6E03 /* Data.swift */,
-				403F64C923AB6755009C6E03 /* LogData.json */,
-				403F64CD23AB82C4009C6E03 /* FoodData.json */,
+				40D8636A23B5D2E9003302BA /* MainViews */,
+				40D8636B23B5D310003302BA /* Sources */,
 				403F648E23AB1F59009C6E03 /* Assets.xcassets */,
 				403F649323AB1F59009C6E03 /* LaunchScreen.storyboard */,
 				403F649623AB1F59009C6E03 /* Info.plist */,
@@ -200,6 +204,38 @@
 				40D8636123B46458003302BA /* Uploadable.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		40D8636923B5D2CF003302BA /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				40D8636523B5A57E003302BA /* NetworkManager.swift */,
+				40D8636723B5D095003302BA /* SyncManager.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		40D8636A23B5D2E9003302BA /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				403F64BC23AB273B009C6E03 /* QRScannerView.swift */,
+				40D8637423B9DFB2003302BA /* RealmProduct.swift */,
+				403F64C323AB624E009C6E03 /* HomePage.swift */,
+				403F64C523AB6272009C6E03 /* LiveLogsView.swift */,
+				403F64CB23AB69B6009C6E03 /* Data.swift */,
+				40D8636C23B5D425003302BA /* VideoPlayerView.swift */,
+				40D8637023B9A3B7003302BA /* RealmVideo.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		40D8636B23B5D310003302BA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				403F64C923AB6755009C6E03 /* LogData.json */,
+				403F64CD23AB82C4009C6E03 /* FoodData.json */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4A5EC8105AF047AE5359EF46 /* Pods */ = {
@@ -493,8 +529,10 @@
 				403F64C423AB624E009C6E03 /* HomePage.swift in Sources */,
 				403F64C623AB6272009C6E03 /* LiveLogsView.swift in Sources */,
 				40D8636023B463ED003302BA /* SyncService.swift in Sources */,
+				40D8636D23B5D425003302BA /* VideoPlayerView.swift in Sources */,
+				40D8637123B9A3B8003302BA /* RealmVideo.swift in Sources */,
 				40D8635E23B1C13F003302BA /* RealmUser.swift in Sources */,
-				403F64C823AB6417009C6E03 /* Log.swift in Sources */,
+				40D8636823B5D095003302BA /* SyncManager.swift in Sources */,
 				403F64CC23AB69B6009C6E03 /* Data.swift in Sources */,
 				403F64BB23AB272A009C6E03 /* SignUpView.swift in Sources */,
 				403F648923AB1F57009C6E03 /* AppDelegate.swift in Sources */,
@@ -502,8 +540,10 @@
 				403F64BD23AB273B009C6E03 /* QRScannerView.swift in Sources */,
 				403F648B23AB1F57009C6E03 /* SceneDelegate.swift in Sources */,
 				403F648D23AB1F57009C6E03 /* ContentView.swift in Sources */,
+				40D8636623B5A57F003302BA /* NetworkManager.swift in Sources */,
 				40D8636423B47FDD003302BA /* Network.swift in Sources */,
 				40D8636223B46458003302BA /* Uploadable.swift in Sources */,
+				40D8637523B9DFB2003302BA /* RealmProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"franklin-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = N86Y3KCW3L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "franklin-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -691,6 +732,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"franklin-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = N86Y3KCW3L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "franklin-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

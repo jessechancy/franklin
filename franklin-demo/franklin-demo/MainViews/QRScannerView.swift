@@ -14,6 +14,7 @@ struct QRScannerView: View {
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
         self.showQR = false
     }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -24,7 +25,7 @@ struct QRScannerView: View {
                         .font(.largeTitle)
                         .foregroundColor(Color.gray)
                         .padding()
-                    CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
+                    CodeScannerView(codeTypes: [.qr], simulatedData: "Test Result for In Simulator", completion: self.handleScan)
                         .frame(minHeight: 0, maxHeight: 350)
                     Text ("Scan the qr code to connect")
                         .font(.caption)

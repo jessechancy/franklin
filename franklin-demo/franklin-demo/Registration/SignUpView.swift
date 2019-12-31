@@ -40,7 +40,7 @@ struct SignUpView: View {
                         Text("HELLO,")
                             .font(.largeTitle)
                             .foregroundColor(Color.black)
-                            .padding(.bottom, 10)
+                            .padding(.bottom, 10.0)
                             .padding(.leading, 20)
                             .padding(.top, 50)
                         Text("Welcome to franklin, create account now.")
@@ -204,43 +204,66 @@ struct SignUpView: View {
     }
     
     func sign_up() -> Bool {
-        
-        if NetStatus.shared.isConnected {
+
+        let config = Realm.Configuration(
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 1,
+
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { migration, oldSchemaVersion in
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                if (oldSchemaVersion < 1) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+            })
+
+        // Tell Realm to use this new configuration object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+        let realm = try! Realm()
+        let realmUser = User()
+        if ConnectivityManager.shared().isNetworkAvaliable {
             print("Connected to Wifi")
             do {
-               let user = LCUser()
+                let user = LCUser()
 
-               user.username = LCString(self.first_name)
-               user.password = LCString(self.password)
-               user.email = LCString(self.email)
-               
-               try user.set("name", value: LCString(self.first_name))
-               try user.set("lastname", value: LCString(self.last_name))
-               try user.set("address", value: LCString(self.address))
-               try user.set("statecity", value: LCString(self.statecity))
-               try user.set("zipcode", value: LCString(self.zipcode))
-               return true
-           } catch {
-               print(error)
-               return false
-           }
+                user.username = LCString(self.first_name)
+                user.password = LCString(self.password)
+                user.email = LCString(self.email)
+
+                try user.set("name", value: LCString(self.first_name))
+                try user.set("lastname", value: LCString(self.last_name))
+                try user.set("address", value: LCString(self.address))
+                try user.set("statecity", value: LCString(self.statecity))
+                try user.set("zipcode", value: LCString(self.zipcode))
+                if (user.signUp().isSuccess) {
+                    print("Uploaded to LeanCloud")
+                } else {
+                    return false
+                }
+            } catch {
+                print(error)
+                return false
+            }
         } else {
             print("Not Connected to Wifi")
+            realmUser.uploaded = false
         }
-        let realm = try! Realm()
-        let user = User()
-
-        user.first_name = self.first_name
-        user.last_name = self.last_name
-        user.email = self.email
-        user.password = self.password
-        user.address = self.address
-        user.statecity = self.statecity
-        user.zipcode = self.zipcode
+        realmUser.first_name = self.first_name
+        realmUser.last_name = self.last_name
+        realmUser.email = self.email
+        realmUser.password = self.password
+        realmUser.address = self.address
+        realmUser.statecity = self.statecity
+        realmUser.zipcode = self.zipcode
         try! realm.write {
-            realm.add(user, update: .all)
+            realm.add(realmUser, update: .all)
+            print("Uploaded to Realm")
         }
-        print(Realm.Configuration.defaultConfiguration.fileURL)
+        //print(Realm.Configuration.defaultConfiguration.fileURL)
         return true
     }
 }

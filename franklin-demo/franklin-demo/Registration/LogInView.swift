@@ -107,12 +107,14 @@ struct LogInView: View {
     }
     
     func log_in() -> Bool {
-        if LCUser.logIn(email: self.email, password: self.password).isSuccess {
-            return true
+        if ConnectivityManager.shared().isNetworkAvaliable {
+            print("Logging In through LeanCloud")
+            return LCUser.logIn(email: self.email, password: self.password).isSuccess
+            
         } else {
-            print("LeanCloud Failed To Connect, Using Realm Local Database")
             let realm = try! Realm()
             let results = realm.objects(User.self).filter("email = '\(self.email)'")
+            print("Logging In through Realm")
             return !results.isEmpty && results[0].password == self.password
         }
     }

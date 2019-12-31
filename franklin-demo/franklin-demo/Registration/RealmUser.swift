@@ -9,9 +9,8 @@
 import Foundation
 import RealmSwift
 
-class User : Object, Uploadable {
+class User : Object {
     @objc dynamic var id: String? = UUID().uuidString
-    //@objc dynamic var id: Int = 0
     @objc dynamic var first_name : String?
     @objc dynamic var last_name : String?
     @objc dynamic var email : String?
@@ -20,13 +19,10 @@ class User : Object, Uploadable {
     @objc dynamic var statecity : String?
     @objc dynamic var zipcode : String?
     @objc dynamic var updatedDate: Date = Date()
+    @objc dynamic var uploaded: Bool = true
     
     override static func primaryKey() -> String? {
         return "id"
-    }
-    
-    static var resourceURL: URL {
-        return URL(string: "\(API)/users")!
     }
 }
 
