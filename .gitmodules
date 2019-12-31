@@ -1,0 +1,3 @@
+[submodule "franklin-demo/franklin-demo"]
+	path = franklin-demo/franklin-demo
+	url = https://gitlab.com/Clobotics/Retail/retailapp/franklinapp-ios.git

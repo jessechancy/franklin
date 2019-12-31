@@ -1,6 +1,0 @@
-framework module Pods_franklin_demo_franklin_demoUITests {
-  umbrella header "Pods-franklin-demo-franklin-demoUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
