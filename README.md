@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # franklin
 
 #### Franklin Demo IOS Application written with SwiftUI
@@ -26,3 +27,7 @@ This project is a ios application for the franklin project. There are a lot of f
 
 ##### Created By Jesse Chan
 ##### Clobotics Global
+=======
+# FranklinAPP-IOS
+
+>>>>>>> 350584707c2c4c62e5ef6d836ccd057fdf9a761f
