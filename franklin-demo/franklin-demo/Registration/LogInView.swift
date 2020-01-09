@@ -13,6 +13,7 @@ import RealmSwift
 struct LogInView: View {
     
     @EnvironmentObject var settings: UserSettings
+    @EnvironmentObject var user_onboard: UserOnboard
     
     @State var email : String = ""
     @State var password : String = ""
@@ -27,6 +28,15 @@ struct LogInView: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Button (action:
+                {self.user_onboard.onboard_complete = false}
+                                   ) {
+                    Image(systemName: "house")
+                        .padding()
+                }
+                Spacer()
+            }
             //Title
             Spacer()
             HStack {
@@ -108,13 +118,13 @@ struct LogInView: View {
     
     func log_in() -> Bool {
         if ConnectivityManager.shared().isNetworkAvaliable {
-            print("Logging In through LeanCloud")
+            print("Logging In through LeanCloud (Online Database)")
             return LCUser.logIn(email: self.email, password: self.password).isSuccess
             
         } else {
+            print("Logging In through Realm (Local Database)")
             let realm = try! Realm()
             let results = realm.objects(User.self).filter("email = '\(self.email)'")
-            print("Logging In through Realm")
             return !results.isEmpty && results[0].password == self.password
         }
     }

@@ -9,8 +9,7 @@
 
 import UIKit
 import LeanCloud
-
-let API = "https://teyfoihx.lc-cn-n1-shared.com"
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             fatalError("\(error)")
         }
+        let config = Realm.Configuration(
+             schemaVersion: 1,
+             migrationBlock: { migration, oldSchemaVersion in
+                 
+                 if (oldSchemaVersion < 1) {
+                     // Nothing to do!
+                     
+                 }
+         })
+        Realm.Configuration.defaultConfiguration = config
         return true
 
         

@@ -15,22 +15,42 @@ struct ProductRow: View {
     var body: some View {
         HStack {
             Image(systemName: "person")
-                .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100)
-            
+                .resizable()
+                .scaledToFit()
+                .frame(minWidth: 0, maxWidth: 40, minHeight: 0, maxHeight: 40)
+                .padding(20)
             VStack (alignment: .leading) {
                 Text(product.name!)
                 HStack {
                     if (product.stock == 0) {
-                        Text("Level 0")
+                        LevelBar(color: Color.red)
+                        LevelBar()
+                        LevelBar()
+                        LevelBar()
                     } else if (product.stock == 1) {
-                        Text("Level 1")
+                        LevelBar(color: Color.red)
+                        LevelBar(color: Color.orange)
+                        LevelBar()
+                        LevelBar()
                     } else if (product.stock == 2) {
-                        Text("Level 2")
+                        LevelBar(color: Color.red)
+                        LevelBar(color: Color.orange)
+                        LevelBar(color: Color.yellow)
+                        LevelBar()
                     } else if (product.stock == 3) {
-                        Text("Level 3")
+                        LevelBar(color: Color.red)
+                        LevelBar(color: Color.orange)
+                        LevelBar(color: Color.yellow)
+                        LevelBar(color: Color.green)
                     }
                 }
+                HStack {
+                    
+                    Spacer()
+
+                }
             }
+            
             Spacer()
         }
     }
@@ -42,27 +62,10 @@ struct HomePage: View {
     var realm: Realm
     var ProductData: Results<Product>
     init() {
-        let config = Realm.Configuration(
-            // Set the new schema version. This must be greater than the previously used
-            // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 1,
-
-            // Set the block which will be called automatically when opening a Realm with
-            // a schema version lower than the one set above
-            migrationBlock: { migration, oldSchemaVersion in
-                // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                if (oldSchemaVersion < 1) {
-                    // Nothing to do!
-                    // Realm will automatically detect new properties and removed properties
-                    // And will update the schema on disk automatically
-                }
-            })
-
-        // Tell Realm to use this new configuration object for the default Realm
-        Realm.Configuration.defaultConfiguration = config
+        
         self.realm = try! Realm()
         let realmProduct = Product()
-        realmProduct.icon = "hello"
+        realmProduct.icon = "tmpicon"
         realmProduct.name = "testproduct1"
         self.ProductData = self.realm.objects(Product.self)
         try! realm.write {
@@ -84,7 +87,7 @@ struct HomePage: View {
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(y: geometry.frame(in: .global).minY/9)
                         .clipped()
-                    }.frame(height:400)
+                    }.frame(height:200)
                     VStack {
                         HStack{
                             Text("YOUR PRODUCTS:")
@@ -95,11 +98,11 @@ struct HomePage: View {
                             Spacer()}
                         ForEach (self.ProductData) {P in
                             ProductRow(product: P)
+                            Divider()
                         }
                     }
                 }.edgesIgnoringSafeArea(.all)
                  .foregroundColor(Color.black)
-                
                 HStack {
                     Spacer()
                     FloatingMenu(showQR: $showQR)
@@ -187,5 +190,16 @@ struct FloatingMenu: View {
                 self.showMenuButton1.toggle()
             }
         })
+    }
+}
+
+struct LevelBar: View {
+    var color : Color? = Color.white
+    var body: some View {
+        RoundedRectangle(cornerRadius: 5)
+            .size(width: 60, height: 10)
+            .frame(width: 65, height: 20)
+            .foregroundColor(color)
+            .shadow(color: .gray, radius: 0.2, x: 1, y: 1)
     }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # franklin
 
 #### Franklin Demo IOS Application written with SwiftUI

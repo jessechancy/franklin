@@ -36,193 +36,183 @@ struct SignUpView: View {
         ScrollView {
             VStack {
                 HStack {
-                    VStack (alignment: .leading) {
-                        Text("HELLO,")
-                            .font(.largeTitle)
-                            .foregroundColor(Color.black)
-                            .padding(.bottom, 10.0)
-                            .padding(.leading, 20)
-                            .padding(.top, 50)
-                        Text("Welcome to franklin, create account now.")
-                            .font(.caption)
-                            .foregroundColor(Color.gray)
-                            .padding(.bottom, 30)
-                            .padding(.leading, 20)
-                        
+                    NavigationLink (destination: ContentView()) {
+                        Image(systemName: "house")
+                        .padding()
                     }
                     Spacer()
                 }
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    TextField ("Name", text: $first_name)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
+                VStack {
+                        HStack {
+                            VStack (alignment: .leading) {
+                                Text("HELLO,")
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color.black)
+                                    .padding(.bottom, 10.0)
+                                    .padding(.leading, 20)
+                                    .padding(.top, 50)
+                                Text("Welcome to franklin, create account now.")
+                                    .font(.caption)
+                                    .foregroundColor(Color.gray)
+                                    .padding(.bottom, 30)
+                                    .padding(.leading, 20)
+                                
+                            }
+                            Spacer()
+                        }
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            TextField ("Name", text: $first_name)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            TextField ("Last Name", text: $last_name)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            TextField ("Email Address", text: $email)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            SecureField ("Password", text: $password)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            TextField ("Address", text: $address)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            TextField ("State/City", text: $statecity)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                        
+                        HStack (alignment: .center) {
+                            //Placeholder Image
+                            Image(systemName: "person")
+                                .padding()
+                            Divider().frame(height:20)
+                            TextField ("Zip Code", text: $zipcode)
+                                .foregroundColor(Color.gray)
+                                .font(.caption)
+                                .padding()
+                                .frame(minWidth: 0, maxWidth: 300)
+                        }
+                        .frame(minHeight: 0, maxHeight: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 10)
+                       
+                        Button(action: {
+                            if self.sign_up () {
+                                self.user_onboard.onboard_complete = true
+                                print("Signed Up")
+                            } else {
+                                self.alert_msg = "Invalid form inputs"
+                                self.show_alert.toggle()
+                            }
+                        }) {
+                            Text("CONTINUE")
+                                .font(.headline)
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .frame(width: 350, height: 50)
+                                .background(Color.green)
+                                .cornerRadius(25)
+                                .padding(.bottom, 0)
+                        }
+                        Spacer()
                 }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    TextField ("Last Name", text: $last_name)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
-                }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    TextField ("Email Address", text: $email)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
-                }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    SecureField ("Password", text: $password)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
-                }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    TextField ("Address", text: $address)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
-                }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    TextField ("State/City", text: $statecity)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
-                }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-                
-                HStack (alignment: .center) {
-                    //Placeholder Image
-                    Image(systemName: "person")
-                        .padding()
-                    Divider().frame(height:20)
-                    TextField ("Zip Code", text: $zipcode)
-                        .foregroundColor(Color.gray)
-                        .font(.caption)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: 300)
-                }
-                .frame(minHeight: 0, maxHeight: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.bottom, 10)
-               
-                Button(action: {
-                    if self.sign_up () {
-                        self.user_onboard.onboard_complete = true
-                        print("Signed Up")
-                    } else {
-                        self.alert_msg = "Invalid form inputs"
-                        self.show_alert.toggle()
-                    }
-                }) {
-                    Text("CONTINUE")
-                        .font(.headline)
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .frame(width: 350, height: 50)
-                        .background(Color.green)
-                        .cornerRadius(25)
-                        .padding(.bottom, 0)
-                }
-                Spacer()
+                .alert(isPresented: $show_alert, content: {self.alert})
             }
-            .alert(isPresented: $show_alert, content: {self.alert})
         }
     }
     
     func sign_up() -> Bool {
-
-        let config = Realm.Configuration(
-            // Set the new schema version. This must be greater than the previously used
-            // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 1,
-
-            // Set the block which will be called automatically when opening a Realm with
-            // a schema version lower than the one set above
-            migrationBlock: { migration, oldSchemaVersion in
-                // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                if (oldSchemaVersion < 1) {
-                    // Nothing to do!
-                    // Realm will automatically detect new properties and removed properties
-                    // And will update the schema on disk automatically
-                }
-            })
-
-        // Tell Realm to use this new configuration object for the default Realm
-        Realm.Configuration.defaultConfiguration = config
         let realm = try! Realm()
         let realmUser = User()
         if ConnectivityManager.shared().isNetworkAvaliable {
@@ -250,7 +240,7 @@ struct SignUpView: View {
             }
         } else {
             print("Not Connected to Wifi")
-            realmUser.uploaded = false
+            realmUser.uploaded = false //Default is true
         }
         realmUser.first_name = self.first_name
         realmUser.last_name = self.last_name
@@ -263,6 +253,7 @@ struct SignUpView: View {
             realm.add(realmUser, update: .all)
             print("Uploaded to Realm")
         }
+        //Link to Realm database
         //print(Realm.Configuration.defaultConfiguration.fileURL)
         return true
     }

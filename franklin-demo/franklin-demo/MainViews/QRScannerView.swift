@@ -31,16 +31,6 @@ struct QRScannerView: View {
                         .font(.caption)
                         .foregroundColor(Color.gray)
                         .padding()
-                    Button (action: {self.showQR = false}) {
-                        Text("CONNECT")
-                            .font(.headline)
-                            .foregroundColor(Color.gray)
-                            .padding()
-                            .frame(width: 350, height: 50)
-                            .background(Color.white)
-                            .cornerRadius(25)
-                            .padding(.bottom, 20)
-                    }
                 }.frame(minHeight: 0, maxHeight: .infinity,
                         alignment: .topLeading)
             }

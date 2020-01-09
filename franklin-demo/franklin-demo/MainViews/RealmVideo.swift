@@ -12,9 +12,9 @@ import RealmSwift
 class Video : Object, Codable, Identifiable {
     @objc dynamic var id: String? = UUID().uuidString
     @objc dynamic var url : String?
-    @objc dynamic var time : String?
-    @objc dynamic var date : String?
+    @objc dynamic var date : Date = Date()
     @objc dynamic var name : String?
+    @objc dynamic var uploaded : Bool = true
     
     override static func primaryKey() -> String? {
         return "id"
