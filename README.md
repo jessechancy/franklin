@@ -22,11 +22,3 @@ This project is a ios application for the franklin project. There are a lot of f
 ### AV:
 - Continous video streaming from online source (main page franklin camera stream)
 - Displaying videos on mobile devices
-
-
-##### Created By Jesse Chan
-##### Clobotics Global
-=======
-# FranklinAPP-IOS
-
->>>>>>> 350584707c2c4c62e5ef6d836ccd057fdf9a761f
